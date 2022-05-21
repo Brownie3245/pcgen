@@ -106,6 +106,31 @@ CLASS:Ordained Champion	STARTSKILLPTS:2	CSKILL:Concentration|TYPE=Craft|Heal|Int
 5	ABILITY:Ordained Champion Class Feature|AUTOMATIC|Ordained Champion ~ Holy Warrior
 5	ABILITY:Ordained Champion Class Feature|AUTOMATIC|Ordained Champion ~ War Caster
 
+# Class Name		Hit Dice	Type			Max Level	Source Page		Define				Combat bonus																Save bonus																														Modify VAR
+CLASS:Champion of Chaos	HD:8		TYPE:Prestige	MAXLEVEL:5	SOURCEPAGE:p.90	DEFINE:ChaosChampionLVL|0	BONUS:COMBAT|BASEAB|classlevel("APPLIEDAS=NONEPIC")|TYPE=Base.REPLACE|PREVAREQ:UseAlternateBABProgression,0	BONUS:SAVE|BASE.Fortitude|classlevel("APPLIEDAS=NONEPIC")/2+2	BONUS:SAVE|BASE.Reflex|classlevel("APPLIEDAS=NONEPIC")/3	BONUS:SAVE|BASE.Will|classlevel("APPLIEDAS=NONEPIC")/2+2	BONUS:VAR|ChaosChampionLVL|CL
+# Class Name		Required AL			Required Deity			Required Feat		Required Skill				Req. Known Spell		Required Text
+CLASS:Champion of Chaos	PREALIGN:CE	PREDEITY:1,Tiamat	PREABILITY:1,CATEGORY=FEAT,Weapon Focus	PRESKILL:1,Knowledge (Religion)=7	PRESPELL:1,Magic Weapon	PRETEXT:Alignment: Chaotic Evil. Skill: Knowledge (religion) 7 ranks. Feat: Weapon Focus with deity's favored weapon. Spellcasting: Able to cast magic weapon as a divine spell. Special: Must worship Tiamat.
+# Class Name		Skill Pts/Lvl	Class Skill
+CLASS:Champion of Chaos	STARTSKILLPTS:2	CSKILL:Concentration|TYPE=Craft|Heal|Intimidate|Knowledge (arcana)|Knowledge (nobility and royalty)|Knowledge (Religion)|Knowledge (the planes)|TYPE=Profession|Ride|Spellcraft
+###Block
+2	ADD:SPELLCASTER|Divine
+3	ADD:SPELLCASTER|Divine
+5	ADD:SPELLCASTER|Divine
+###Block
+1	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Spellcasting
+1	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Bonus Domain
+1	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Combat Feats
+1	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Continued Advancement
+1	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Modified Spontaneous Casting
+2	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Diehard
+2	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Smite
+3	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Channel Spell
+3	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Divine Bulwark
+4	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Fist of the Gods
+4	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Rapid Spontaneous Casting
+5	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ Holy Warrior
+5	ABILITY:Champion of Chaos Class Feature|AUTOMATIC|Ordained Champion ~ War Caster
+
 # Class Name			Hit Dice	Type			Max Level	Source Page		Define					Combat bonus														Save bonus																													Modify VAR
 CLASS:Paragnostic Apostle	HD:4		TYPE:Prestige	MAXLEVEL:5	SOURCEPAGE:p.94	DEFINE:ParagnosticApostleLVL|0	BONUS:COMBAT|BASEAB|classlevel("APPLIEDAS=NONEPIC")*1/2|PREVAREQ:UseAlternateBABProgression,0	BONUS:SAVE|BASE.Fortitude|classlevel("APPLIEDAS=NONEPIC")/3	BONUS:SAVE|BASE.Reflex|classlevel("APPLIEDAS=NONEPIC")/3	BONUS:SAVE|BASE.Will|classlevel("APPLIEDAS=NONEPIC")/2+2	BONUS:VAR|ParagnosticApostleLVL|CL	BONUS:VAR|ClassBABPoor|classlevel("APPLIEDAS=NONEPIC")|PREVAREQ:UseFractionalBAB,1
 # Class Name			Required Skill													Required Text
